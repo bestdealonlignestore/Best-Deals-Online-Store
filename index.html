@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Best Deal Online Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="Index.css"/>
+</head>
+<body>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon"><div class="header-logo-box">
+  <img src="images/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:9px;">
+</div></div>
+      <div class="sidebar-logo-text">Best Deal<br><span>Online Store</span></div>
+    </div>
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-item">
+      <button class="nav-link" onclick="toggleSub('sub-produits',this)">
+        <span class="nav-icon">👗</span>
+        <span class="nav-label">Produits</span>
+        <span class="nav-arrow">▶</span>
+      </button>
+      <div class="sub-menu" id="sub-produits">
+        <a class="sub-link" onclick="navGo('article1')"><span class="sub-dot"></span>Montres en Acier Inoxidable</a>
+        <a class="sub-link" onclick="navGo('article2')"><span class="sub-dot"></span>Article 2 — Robes & Jupes</a>
+        <a class="sub-link" onclick="navGo('article3')"><span class="sub-dot"></span>Article 3 — Pantalons & Jeans</a>
+        <a class="sub-link" onclick="navGo('article4')"><span class="sub-dot"></span>Article 4 — Vestes & Manteaux</a>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="nav-item">
+      <button class="nav-link" onclick="toggleSub('sub-contacts',this)">
+        <span class="nav-icon">📞</span>
+        <span class="nav-label">Contacts</span>
+        <span class="nav-arrow">▶</span>
+      </button>
+      <div class="sub-menu" id="sub-contacts">
+        <div class="contact-sub">📱 <a href="tel:+50934441304">+509 34441304 / 32047444</a></div>
+        <div class="contact-sub">✉️ <a href="mailto:info@bestdeal.ht">info@bestdeal.ht</a></div>
+        <div class="contact-sub">💬 <a href="https://wa.me/50934441304" target="_blank">WhatsApp Nou</a></div>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <a class="nav-link" onclick="navGo('categories')" style="text-decoration:none;">
+      <span class="nav-icon">🗂️</span><span class="nav-label">Catégories</span>
+    </a>
+    <a class="nav-link" onclick="navGo('temoignages')" style="text-decoration:none;">
+      <span class="nav-icon">⭐</span><span class="nav-label">Avis Clients</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <button class="menu-toggle" onclick="openSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="header-logo" href="">
+    <div class="header-logo-box">
+  <img src="images/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:9px;">
+</div>
+    <div class="header-logo-text">Best Deal<em>Online Store</em></div>
+  </a>
+  <div class="header-actions">
+    <input class="header-search" type="search" placeholder="Rechercher…"/>
+    <button class="header-cart">🛒 <span>Panier (0)</span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pill">✨ Nouvelle Collection Disponible</div>
+  <h1>Style & Élégance<br>pour <mark>Chaque Occasion</mark></h1>
+  <p>Des abiman de qualité premium à prix imbattables.</p>
+  <div class="hero-ctas">
+    <button class="btn-gold" onclick="document.getElementById('article1').scrollIntoView({behavior:'smooth'})">Voir la Collection 👕</button>
+    <button class="btn-ghost" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">Parcourir les Catégories</button>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-wrap">
+  <div class="stats-card">
+    <div class="stat"><div class="stat-n">800+</div><div class="stat-l">Produits</div></div>
+    <div class="stat"><div class="stat-n">4 000+</div><div class="stat-l">Clients</div></div>
+    <div class="stat"><div class="stat-n">4.9 ⭐</div><div class="stat-l">Note moyenne</div></div>
+    <div class="stat"><div class="stat-n">24h</div><div class="stat-l">Livraison</div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="inner">
+    <div class="sec-head">
+      <div>
+        <div class="article-label badge-1">🗂️ Navigation</div>
+        <div class="sec-title">Catégories</div>
+      </div>
+    </div>
+    <div class="chips">
+      <div class="chip active" onclick="document.getElementById('article1').scrollIntoView({behavior:'smooth'})"><span class="chip-icon">
+<span class="chip-icon">
+  <img src="images/SKMEI.jpg" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span>
+      </span><span class="chip-name">Montres en Acier<br> Inoxidable.</span></div>
+      <div class="chip" onclick="document.getElementById('article2').scrollIntoView({behavior:'smooth'})"><span class="chip-icon">
+<span class="chip-icon">
+  <img src="images/Complets.jpg" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span></span><span class="chip-name">Větement <br> pour enfants</span></div>
+      <div class="chip" onclick="document.getElementById('article3').scrollIntoView({behavior:'smooth'})"><span class="chip-icon"> 
+<span class="chip-icon">
+  <img src="chemise-cat.jpg" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span></span><span class="chip-name">Pantalons & Jeans</span></div>
+      <div class="chip" onclick="document.getElementById('article4').scrollIntoView({behavior:'smooth'})"><span class="chip-icon">
+<span class="chip-icon">
+  <img src="chemise-cat.jpg" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span></span><span class="chip-name">Vestes & Manteaux</span></div>
+      <div class="chip"><span class="chip-icon"> 
+<span class="chip-icon">
+  <img src="chemise-cat.jpg" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span></span><span class="chip-name">Chaussures</span></div>
+      <div class="chip"><span class="chip-icon">
+<span class="chip-icon">
+  <img src="images/montre10.png" alt="Chemises" style="width:50px;height:50px;object-fit:cover;border-radius:10px;">
+</span></span><span class="chip-name">Accessoires</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 1 -->
+<section class="section section-alt" id="article1">
+  <div class="inner">
+    <div class="sec-head">
+      <div><div class="article-label badge-1"> 💎 Bijoux </div><div class="sec-title">Montres Homme & Femme</div></div>
+      <a href="#" class="see-all">Tout voir →</a>
+    </div>
+    <div class="h-scroll">
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/SKMEI.jpg"alt="Montre SKMEI" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Marc SKMEI</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card">  <div class="p-card-img">
+  <img src="images/poedegar1.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price">Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card">  <div class="p-card-img">
+  <img src="images/poedegar2.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card">  <div class="p-card-img">
+  <img src="images/poedegar3.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar4.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar5.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat"> Montre HommeL</div><div class="p-card-name"> Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price">Prix: 5 4000 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar6.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homne</div><div class="p-card-name">Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar7.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant<br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar8.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name"> Top Élégant <br> Marc Poedagar</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HGT</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img">
+  <img src="images/Poedegar9.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Marc Poedagar </div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+<div class="p-card"><div class="p-card-img">
+    <img src="images/Montre Femme.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant, Acier inoxidable. <br>Marc Besseron </div><div class="p-card-foot"><span class="p-card-price"> Prix: 8 100 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+ <div class="p-card"><div class="p-card-img">
+      <img src="images/Montre femme1.jpg"alt="Montre femme" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre femme</div><div class="p-card-name">Top Élégant <br> Marc Pablo Raez</div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Poedegar10.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Montre Mecanique </div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+     
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Corean.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Montre Mecanique </div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+     
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Bingbond.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Marc Bingbond </div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+    
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Bondony1.jpg" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Marc Bingbond </div><div class="p-card-foot"><span class="p-card-price"> Prix: 5 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Mecanic2.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Montre Mécanique</div><div class="p-card-foot"><span class="p-card-price"> Prix: 8 100 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+    
+<div class="p-card"><div class="p-card-img">
+       <img src="images/Mecanic3.png" alt="Chemise" style="width:100%;height:100%;object-fit:cover;">
+</div><div class="p-card-body"><div class="p-card-cat">Montre Homme</div><div class="p-card-name">Top Élégant <br> Montre Mécanique</div><div class="p-card-foot"><span class="p-card-price"> Prix: 8 100 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 2 -->
+<section class="section" id="article2" style="background:#fff;">
+  <div class="inner">
+    <div class="sec-head">
+      <div><div class="article-label badge-2">👗 Vëtement pour Enfants</div><div class="sec-title">Complets</div></div>
+      <a href="#" class="see-all">Tout voir →</a>
+    </div>
+    <div class="h-scroll">
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">
+          <img src="images/Complets1.jpg" alt="Robe Maxi Bohème" style="width:100%;height:100%;object-fit:cover;">
+      </div><div class="p-card-body"><div class="p-card-cat">Complets Disponible <br> de 1 à 3 ans</div><div class="p-card-name">100% Lain</div><div class="p-card-foot"><span class="p-card-price">2 250gdes <br> 3 pour 6 000gdes</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      
+      <div class="p-card"><div class="p-card-img art2-bg">👗</div><div class="p-card-body"><div class="p-card-cat">Femme • S–XL</div><div class="p-card-name">Robe Cocktail Noire</div><div class="p-card-foot"><span class="p-card-price">5 200 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art2-bg">🧣</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–XL</div><div class="p-card-name">Jupe Plissée Mi-Longue</div><div class="p-card-foot"><span class="p-card-price">2 100 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art2-bg">👗</div><div class="p-card-body"><div class="p-card-cat">Femme • S–XL</div><div class="p-card-name">Robe Florale Été</div><div class="p-card-foot"><span class="p-card-price">3 300 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art2-bg">🎀</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–L</div><div class="p-card-name">Mini Jupe Jean Stylée</div><div class="p-card-foot"><span class="p-card-price">1 800 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art2-bg">👗</div><div class="p-card-body"><div class="p-card-cat">Femme • S–XXL</div><div class="p-card-name">Robe Soirée Élégante</div><div class="p-card-foot"><span class="p-card-price">6 800 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 3 -->
+<section class="section section-alt" id="article3">
+  <div class="inner">
+    <div class="sec-head">
+      <div><div class="article-label badge-3">👖 Article 3</div><div class="sec-title">Pantalons & Jeans</div></div>
+      <a href="#" class="see-all">Tout voir →</a>
+    </div>
+    <div class="h-scroll">
+      <div class="p-card"><div class="p-card-img art3-bg">👖</div><div class="p-card-body"><div class="p-card-cat">Homme • 30–38</div><div class="p-card-name">Jean Slim Bleu Indigo</div><div class="p-card-foot"><span class="p-card-price">3 500 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art3-bg">👖</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–XL</div><div class="p-card-name">Pantalon Taille Haute</div><div class="p-card-foot"><span class="p-card-price">2 900 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art3-bg">🩲</div><div class="p-card-body"><div class="p-card-cat">Homme • S–XXL</div><div class="p-card-name">Short Cargo Casual</div><div class="p-card-foot"><span class="p-card-price">1 700 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art3-bg">👖</div><div class="p-card-body"><div class="p-card-cat">Unisexe • 28–36</div><div class="p-card-name">Jean Droit Classique</div><div class="p-card-foot"><span class="p-card-price">2 700 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art3-bg">👖</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–L</div><div class="p-card-name">Legging Sport Confort</div><div class="p-card-foot"><span class="p-card-price">1 400 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art3-bg">🩲</div><div class="p-card-body"><div class="p-card-cat">Homme • M–XXL</div><div class="p-card-name">Pantalon Chino Beige</div><div class="p-card-foot"><span class="p-card-price">2 500 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 4 -->
+<section class="section" id="article4" style="background:#fff;">
+  <div class="inner">
+    <div class="sec-head">
+      <div><div class="article-label badge-4">🧥 Article 4</div><div class="sec-title">Vestes & Manteaux</div></div>
+      <a href="#" class="see-all">Tout voir →</a>
+    </div>
+    <div class="h-scroll">
+      <div class="p-card"><div class="p-card-img art4-bg">🧥</div><div class="p-card-body"><div class="p-card-cat">Homme • S–XL</div><div class="p-card-name">Veste Blazer Classique</div><div class="p-card-foot"><span class="p-card-price">7 500 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art4-bg">🧥</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–XL</div><div class="p-card-name">Manteau Long Laine</div><div class="p-card-foot"><span class="p-card-price">9 200 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art4-bg">🥼</div><div class="p-card-body"><div class="p-card-cat">Unisexe • M–XXL</div><div class="p-card-name">Trench Coat Élégant</div><div class="p-card-foot"><span class="p-card-price">8 800 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art4-bg">🧥</div><div class="p-card-body"><div class="p-card-cat">Homme • S–XXL</div><div class="p-card-name">Veste Jean Oversize</div><div class="p-card-foot"><span class="p-card-price">4 800 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art4-bg">🧥</div><div class="p-card-body"><div class="p-card-cat">Femme • XS–L</div><div class="p-card-name">Veste Cuir Slim Fit</div><div class="p-card-foot"><span class="p-card-price">11 500 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+      <div class="p-card"><div class="p-card-img art4-bg">🥼</div><div class="p-card-body"><div class="p-card-cat">Homme • M–XL</div><div class="p-card-name">Parka Hiver Chaud</div><div class="p-card-foot"><span class="p-card-price">10 200 HTG</span><button class="add-btn" onclick="addToCart(event)">+</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES -->
+<section class="section section-dark" id="temoignages">
+  <div class="inner">
+    <div class="sec-head">
+      <div><div class="sec-title on-dark">⭐ Avis Clients</div></div>
+    </div>
+    <div class="h-scroll">
+      <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Trè bon kalite abiman yo! Best Deal pa janm desevwa mwen.</p><div class="t-user"><div class="t-avatar">MM</div><div><div class="t-name">Marie M.</div><div class="t-loc">Port-au-Prince</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Livrezon te vit, abiman yo konfòtab epi bèl. M achte chak mwa!</p><div class="t-user"><div class="t-avatar">JP</div><div><div class="t-name">Jean P.</div><div class="t-loc">Cap-Haïtien</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★☆</div><p class="t-text">Très belle collection, des prix raisonnables. Commande via WhatsApp parfaite!</p><div class="t-user"><div class="t-avatar">RS</div><div><div class="t-name">Rose S.</div><div class="t-loc">Pétion-Ville</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Abiman yo solid epi yo diran. Mwen pote yon chemise depi 6 mwa epi li toujou sanble nèf.</p><div class="t-user"><div class="t-avatar">CL</div><div><div class="t-name">Claude L.</div><div class="t-loc">Delmas</div></div></div></div>
+      <div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">Service client impeccable, réponse rapide. Ma robe est arrivée en parfait état!</p><div class="t-user"><div class="t-avatar">NB</div><div><div class="t-name">Nadine B.</div><div class="t-loc">Gonaïves</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section">
+  <div class="inner">
+    <div class="newsletter">
+      <h3>📩 Restez Informé(e)</h3>
+      <p>Recevez nos nouvelles collections et offres exclusives.</p>
+      <div class="nl-form">
+        <input class="nl-input" type="email" placeholder="Votre adresse email…"/>
+        <button class="nl-btn">S'inscrire 🚀</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <h4>🛍️ Best Deal Online Store</h4>
+      <p>Boutique en ligne spécialisée en abiman de qualité pour hommes, femmes et enfants.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Produits</h5>
+      <a href="#article1">Chemises & Hauts</a>
+      <a href="#article2">Robes & Jupes</a>
+      <a href="#article3">Pantalons & Jeans</a>
+      <a href="#article4">Vestes & Manteaux</a>
+    </div>
+    <div class="foot-col">
+      <h5>Boutique</h5>
+      <a href="#">Nouveautés</a>
+      <a href="#">Soldes</a>
+      <a href="#">Guide des tailles</a>
+      <a href="#">Livraison & Retours</a>
+    </div>
+    <div class="foot-col">
+      <h5>Contacts</h5>
+      <a href="tel:+50934441304">📱 +509 34441304</a>
+      <a href="mailto:info@bestdeal.ht">✉️ info@bestdeal.ht</a>
+      <a href="https://wa.me/50934441304" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025 Best Deal Online Store.</span>
+    <span>Fait avec ❤️ en Haïti</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-tip" id="waTip">💬 Bonjou! Kijan nou ka ede ou?</div>
+  <a class="wa-btn" href="https://wa.me/50934441304" target="_blank">
+    💬<div class="wa-dot"></div>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
