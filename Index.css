@@ -130,6 +130,10 @@ header{position:sticky;top:0;z-index:100;height:var(--header-h);background:linea
 .chip-icon{font-size:2rem;}
 .chip-name{font-size:0.82rem;font-weight:700;color:var(--text);text-align:center;}
 .chip-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
   border-radius: 10px;
 }
