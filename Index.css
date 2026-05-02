@@ -71,6 +71,12 @@ header{position:sticky;top:0;z-index:100;height:var(--header-h);background:linea
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,179,0,0.5);}
 .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5);border-radius:30px;padding:12px 28px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;backdrop-filter:blur(8px);transition:background 0.2s;}
 .btn-ghost:hover{background:rgba(255,255,255,0.15);}
+.btn-gold, .btn-ghost {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* STATS */
 .stats-wrap{max-width:960px;margin:-28px auto 0;padding:0 20px;position:relative;z-index:10;}
