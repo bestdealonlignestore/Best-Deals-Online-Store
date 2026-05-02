@@ -14,12 +14,16 @@
 <div id="overlay" onclick="closeSidebar()"></div>
 
 <!-- HEADER -->
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
 <nav id="sidebar">
   <div class="sidebar-header">
     <div class="sidebar-logo">
-      <div class="sidebar-logo-icon"><div class="header-logo-box">
-  <img src="image/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:9px;">
-</div></div>
+      <div class="sidebar-logo-icon">
+        <img src="image/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:10px;">
+      </div>
       <div class="sidebar-logo-text">Best Deal<br><span>Online Store</span></div>
     </div>
     <button class="sidebar-close" onclick="closeSidebar()">✕</button>
@@ -32,10 +36,10 @@
         <span class="nav-arrow">▶</span>
       </button>
       <div class="sub-menu" id="sub-produits">
-        <a class="sub-link" onclick="navGo('article1')"><span class="sub-dot"></span>Montres en Acier Inoxidable</a>
-        <a class="sub-link" onclick="navGo('article2')"><span class="sub-dot"></span>Article 2 — Robes & Jupes</a>
-        <a class="sub-link" onclick="navGo('article3')"><span class="sub-dot"></span>Article 3 — Pantalons & Jeans</a>
-        <a class="sub-link" onclick="navGo('article4')"><span class="sub-dot"></span>Article 4 — Vestes & Manteaux</a>
+        <a class="sub-link" onclick="navGo('art1')"><span class="sub-dot"></span>Article 1 — Chemises & Hauts</a>
+        <a class="sub-link" onclick="navGo('art2')"><span class="sub-dot"></span>Article 2 — Robes & Jupes</a>
+        <a class="sub-link" onclick="navGo('art3')"><span class="sub-dot"></span>Article 3 — Pantalons & Jeans</a>
+        <a class="sub-link" onclick="navGo('art4')"><span class="sub-dot"></span>Article 4 — Vestes & Manteaux</a>
       </div>
     </div>
     <div class="sidebar-divider"></div>
@@ -46,21 +50,33 @@
         <span class="nav-arrow">▶</span>
       </button>
       <div class="sub-menu" id="sub-contacts">
-        <div class="contact-sub">📱 <a href="tel:+50934441304">+509 34441304 / 32047444</a></div>
+        <div class="contact-sub">📱 <a href="tel:+50912345678">+509 1234-5678</a></div>
         <div class="contact-sub">✉️ <a href="mailto:info@bestdeal.ht">info@bestdeal.ht</a></div>
-        <div class="contact-sub">💬 <a href="https://wa.me/50934441304" target="_blank">WhatsApp Nou</a></div>
+        <div class="contact-sub">💬 <a href="https://wa.me/50912345678" target="_blank">WhatsApp Nou</a></div>
       </div>
     </div>
     <div class="sidebar-divider"></div>
-    <a class="nav-link" onclick="navGo('categories')" style="text-decoration:none;">
-      <span class="nav-icon">🗂️</span><span class="nav-label">Catégories</span>
-    </a>
-    <a class="nav-link" onclick="navGo('temoignages')" style="text-decoration:none;">
-      <span class="nav-icon">⭐</span><span class="nav-label">Avis Clients</span>
+    <a class="nav-link" href="index.html" style="text-decoration:none;">
+      <span class="nav-icon">🏠</span><span class="nav-label">Retounen Accueil</span>
     </a>
   </div>
 </nav>
 
+<!-- HEADER -->
+<header>
+  <button class="menu-toggle" onclick="openSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="header-logo" href="index.html">
+    <div class="header-logo-box">
+      <img src="image/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:9px;">
+    </div>
+    <div class="header-logo-text">Best Deal<em>Online Store</em></div>
+  </a>
+  <div class="header-actions">
+    <button class="header-cart">🛒 <span>Panier (0)</span></button>
+  </div>
+</header>
 <!-- PAGE HERO -->
 <div class="page-hero">
   <a class="back-btn" href="index.html">← Retounen</a>
