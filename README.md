@@ -1,2 +1,2 @@
 # Best-Deals-Online-Store
-I-commerce boutique
+E-commerce boutique
