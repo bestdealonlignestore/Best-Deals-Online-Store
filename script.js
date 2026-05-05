@@ -79,4 +79,23 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
+/* SLIDER */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function goToSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+  goToSlide(currentSlide + direction);
+}
+
+// Auto slide chak 4 sèkond
+setInterval(() => changeSlide(1), 4000);
 
