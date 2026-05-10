@@ -78,6 +78,27 @@ header{position:sticky;top:0;z-index:100;height:var(--header-h);background:linea
   justify-content: center;
 }
 
+/* BOUTON WHATSAPP COMMANDER */
+.wa-order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  width: 100%;
+  transition: background 0.2s;
+}
+.wa-order-btn:hover { background: #128C7E; }
 /* STATS */
 .stats-wrap{max-width:960px;margin:-28px auto 0;padding:0 20px;position:relative;z-index:10;}
 .stats-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;justify-content:space-around;align-items:center;padding:22px 16px;flex-wrap:wrap;gap:10px;}
